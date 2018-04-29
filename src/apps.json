@@ -11726,9 +11726,11 @@
       "cats": [
         6
       ],
-      "excludes": "PrestaShop",
       "icon": "iPresta.png",
-      "implies": "PHP",
+      "implies": [
+        "PHP\\;confidence:90",
+        "PrestaShop\\;confidence:90"
+      ],
       "meta": {
         "designer": "iPresta"
       },
