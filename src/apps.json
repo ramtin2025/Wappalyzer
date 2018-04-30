@@ -11728,8 +11728,8 @@
       ],
       "icon": "iPresta.png",
       "implies": [
-        "PHP\\;confidence:90",
-        "PrestaShop\\;confidence:90"
+        "PHP",
+        "PrestaShop"
       ],
       "meta": {
         "designer": "iPresta"
