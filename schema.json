@@ -3,13 +3,25 @@
 	"type": "object",
 	"additionalProperties": false,
 	"properties": {
+		"$schema": {
+			"type": "string"
+		},
 		"categories": {
 			"type": "object",
 			"required": true,
 			"additionalProperties": false,
 			"patternProperties": {
 				"^[0-9]+$": {
-					"type": "string"
+					"type": "object",
+					"required": true,
+					"properties": {
+						"priority": {
+							"type": "number"
+						},
+						"name": {
+							"type": "string"
+						}
+					}
 				}
 			}
 		},
@@ -22,13 +34,22 @@
 					"cats": {
 						"type": "array",
 						"items": {
-							"type": "integer"
+							"type": "number"
 						},
 						"required": true
 					},
-					"env": {
-						"type": [ "string", "array" ],
-						"items": {
+					"cpe": {
+						"type": "string"
+					},
+					"cookies": {
+						"type": "object",
+						"additionalProperties": {
+							"type": "string"
+						}
+					},
+					"js": {
+						"type": "object",
+						"additionalProperties": {
 							"type": "string"
 						}
 					},
@@ -39,19 +60,28 @@
 						}
 					},
 					"html": {
-						"type": [ "string", "array" ],
+						"type": [
+							"string",
+							"array"
+						],
 						"items": {
 							"type": "string"
 						}
 					},
 					"excludes": {
-						"type": [ "string", "array" ],
+						"type": [
+							"string",
+							"array"
+						],
 						"items": {
 							"type": "string"
 						}
 					},
 					"implies": {
-						"type": [ "string", "array" ],
+						"type": [
+							"string",
+							"array"
+						],
 						"items": {
 							"type": "string"
 						}
@@ -63,7 +93,10 @@
 						}
 					},
 					"script": {
-						"type": [ "string", "array" ],
+						"type": [
+							"string",
+							"array"
+						],
 						"items": {
 							"type": "string"
 						}
@@ -76,8 +109,7 @@
 						"required": true
 					},
 					"icon": {
-						"type": "string",
-						"required": true
+						"type": "string"
 					}
 				}
 			}

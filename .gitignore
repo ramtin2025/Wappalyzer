@@ -1,19 +1,19 @@
-.vagrant
+/build/*
+/src/icons/converted/*
+/node_modules
+/npm-debug.log
+/npm-debug.log
 
-build/*
-
-drivers/npm/node_modules
-drivers/npm/npm-debug.log
-
-src/icons/converted/*
-
-package.json
-node_modules/
-npm-debug.log
-
-Thumbs.db
-ehthumbs.db
-Desktop.ini
-$RECYCLE.BIN/
+package-lock.json
 
 !.gitkeep
+
+# Junk files
+Thumbs.db
+Desktop.ini
+*.DS_Store
+._*
+tags
+tags.*
+.idea
+/nbproject/private/
